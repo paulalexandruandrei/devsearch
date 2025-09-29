@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from . import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('projects/', include('projects.urls')),
      path('', include('users.urls')),
+    path('.well-known/acme-challenge/<str:token>', views.acme_challenge, name='acme_challenge'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
