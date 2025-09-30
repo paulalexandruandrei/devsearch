@@ -1,0 +1,35 @@
+Here are the GitHub branch push commands for a production workflow:
+
+### Current Status Check
+
+git status
+git branch
+
+### Stage and Commit Changes
+
+git add . 
+git commit -m "fix: resolve UUID error in projects template by adding owner validation- Add conditional check for project.owner before generating user-profile URL- Display 'By Anonymous' when project has no owner- Prevent Django from parsing None values as UUIDs in URL patterns"
+
+### Push Feature Branch
+
+git push origin feature/settings-update
+
+
+--------------------------------------------
+
+Production Workflow Options
+Option 1: Pull Request Workflow (Recommended)
+
+# After pushing, create PR on GitHub web interface# Then after approval:git checkout maingit pull origin maingit merge feature/settings-updategit push origin maingit branch -d feature/settings-updategit push origin --delete feature/settings-update
+Option 2: Direct Merge (Solo Projects)
+
+git checkout maingit pull origin maingit merge feature/settings-updategit push origin main
+Clean Up (if using Option 1)
+
+git checkout maingit branch -d feature/settings-updategit push origin --delete feature/settings-update
+Best Practices:
+
+Use descriptive commit messages following conventional commits
+Always test locally before pushing
+Use Pull Requests for code review in team environments
+Keep main branch stable and deployable
