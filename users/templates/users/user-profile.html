@@ -16,7 +16,7 @@
                 
               {% if profile.social_github %}
               <li>
-                <a title="Github" href="#" target="_blank">
+                <a title="Github" href="{{ profile.social_github }}" target="_blank">
                   <img src="{% static 'images/profiles/github-mark.png' %}" alt="Github" style="width:24px; height:24px;" />
                 </a>
               </li>
@@ -24,15 +24,15 @@
 
                 {% if profile.social_stackoverflow %}
                 <li>
-                  <a title="Stackoverflow" href="#" target="_blank">
+                  <a title="Stackoverflow" href="{{ profile.social_stackoverflow }}" target="_blank">
                     <img src="{% static 'images/profiles/stackoverflow-icon.png' %}" alt="Stackoverflow" style="width:24px; height:24px;" />
                   </a>
                 </li>
                 {% endif %}
 
-                {% if profile.social_x%}
+                {% if profile.social_x %}
                 <li>
-                  <a title="Twitter" href="#" target="_blank">
+                  <a title="Twitter" href="{{ profile.social_x }}" target="_blank">
                     <img src="{% static 'images/profiles/twitter-icon.png' %}" alt="Twitter" style="width:24px; height:24px;" />
                   </a>
                 </li>
@@ -40,7 +40,7 @@
 
                 {% if profile.social_linkedin %}
                 <li>
-                  <a title="LinkedIn" href="#" target="_blank">
+                  <a title="LinkedIn" href="{{ profile.social_linkedin }}" target="_blank">
                     <img src="{% static 'images/profiles/linkedin-icon.png' %}" alt="LinkedIn" style="width:24px; height:24px;" />
                   </a>
                 </li>
@@ -48,7 +48,7 @@
 
                 {% if profile.social_website %}
                 <li>
-                  <a title="Personal Website" href="#" target="_blank">
+                  <a title="Personal Website" href="{{ profile.social_website }}" target="_blank">
                     <img src="{% static 'images/profiles/globe-icon.png' %}" alt="Website" style="width:24px; height:24px;" />
                   </a>
                 </li>
